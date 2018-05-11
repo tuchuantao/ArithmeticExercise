@@ -1,0 +1,2 @@
+# ArithmeticExercise
+Company algorithm exercise
