@@ -32,4 +32,12 @@ public class Solution2 {
         return result;
     }
 
+/*  Other people solution
+    String[] numsStr = line.split(" ");
+    int resInt = 0;
+        for (int i = 0; i < numsStr.length; i++) {
+        resInt ^= Integer.parseInt(numsStr[i]);
+    }
+    return resInt + "";*/
+
 }
