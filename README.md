@@ -1,8 +1,9 @@
 # [JAVA常用的八种排序算法](./arithmetic/src/main/java/com/kevin/arithmetic/sort/README.md)
-
+<br/>
+<br/>
 # ArithmeticExercise
 Company algorithm exercise
-
+<br/>
 ## [序号：#2 找出单独出现的数字](./arithmetic/src/main/java/com/kevin/arithmetic/Solution2.java)
 难度：有挑战  时间限制：1000ms  内存限制：10M
 描述
@@ -19,8 +20,8 @@ Company algorithm exercise
 
 输出样例
 16
-
-
+<br/>
+<br/>
 ## [序号：#3 大数相减](./arithmetic/src/main/java/com/kevin/arithmetic/Solution3.java)
 难度：有挑战  时间限制：1000ms  内存限制：100M
 描述
@@ -42,8 +43,8 @@ Company algorithm exercise
 1231231237812739878951331231231237812739878951331231231237812650365639018918853110413950365639018918853110413950365639018918853110413950357
 
 1231231237812739878951331231231237812739878951331231231237812739878620099998762187260121048668768770
-
-
+<br/>
+<br/>
 ## [序号：#4 最长连续数列](./arithmetic/src/main/java/com/kevin/arithmetic/Solution4.java)
 难度：困难  时间限制：1000ms  内存限制：10M
 描述
@@ -76,8 +77,8 @@ Company algorithm exercise
 5
 
 6
-
-
+<br/>
+<br/>
 ## [序号：#5 找出旋转有序数列的中间值](./arithmetic/src/main/java/com/kevin/arithmetic/Solution5.java)
 难度：一般  时间限制：1000ms  内存限制：10M
 描述
@@ -108,8 +109,8 @@ Company algorithm exercise
 4
 
 9
-
-
+<br/>
+<br/>
 ## [序号：#6 交叉队列](./arithmetic/src/main/java/com/kevin/arithmetic/Solution6.java)
 难度：有挑战  时间限制：1000ms  内存限制：10M
 描述
@@ -153,3 +154,72 @@ false
 true
 
 false
+<br/>
+<br/>
+## [序号：#7 第一个缺失正数](./arithmetic/src/main/java/com/kevin/arithmetic/Solution7.java)
+难度：有挑战  时间限制：1000ms  内存限制：10M
+描述
+给出一个无序的数列，找出其中缺失的第一个正数，要求复杂度为 O(n)
+如：[1,2,0]，第一个缺失为3。
+如：[3,4,-1,1]，第一个缺失为2。
+
+输入
+1,2,0
+
+输出
+3
+
+输入样例
+1,2,0
+
+3,4,-1,1
+
+-1,-3,-5
+
+1,2,3
+
+-1,-10,0
+
+输出样例
+3
+
+2
+
+1
+
+4
+
+1
+<br/>
+<br/>
+
+<br/>
+<br/>
+## [序号：#87 美丽字符串](./arithmetic/src/main/java/com/kevin/arithmetic/Solution87.java)
+难度：困难  时间限制：1000ms  内存限制：10M
+描述
+定义一个美丽字符串，对于字符串S，S中只包含小写的a-z字符，存在2条规则：
+规则1：S中每个字符出现的次数一样，如abc，每个字符出现1次，aabbcc，每个字符出现2次
+规则2：添加或删除S中的一个字符后，使得S中每个字符出现的次数一样，如abca，删除一个字符a，则变为abc后每个字符出现1次
+             又例如aabcbbcc,添加一个字符a，则变为aabcbbcca，每个字符出现3次
+对于字符串S，若满足规则1，2中任意一条规则，则称为美丽的字符串
+
+输入
+一个字符串S，只包含a-z的小写字符
+
+输出
+判断该字符串是否为美丽的字符串，若是则输出YES，若不是则输出NO
+
+输入样例
+abc
+
+aabbccc
+
+aaccbd
+
+输出样例
+YES
+
+YES
+
+NO
