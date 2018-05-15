@@ -1,3 +1,5 @@
+# [JAVA常用的八种排序算法](./arithmetic/src/main/java/com/kevin/arithmetic/sort/README.md)
+
 # ArithmeticExercise
 Company algorithm exercise
 
