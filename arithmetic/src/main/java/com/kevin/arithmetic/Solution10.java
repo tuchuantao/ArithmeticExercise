@@ -1,4 +1,4 @@
-package com.kevin.arithmetic.sort;
+package com.kevin.arithmetic;
 
 import java.util.Scanner;
 
