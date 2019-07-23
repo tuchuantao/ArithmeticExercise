@@ -1,4 +1,4 @@
-package exercise.arithmetic.kevin.com.arithmeticexercise
+package com.kevin.arthmeticexercise
 
 import org.junit.Test
 

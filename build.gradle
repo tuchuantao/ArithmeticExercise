@@ -1,3 +1,5 @@
+import javax.tools.JavaCompiler
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -5,6 +7,32 @@ buildscript {
     repositories {
         google()
         jcenter()
+
+        /*
+        mavenLocal() // 本地的Maven缓存
+        mavenCentral() // 公用的Maven仓库
+        */
+
+        /*
+        maven {
+            url 'http;//' // 从url添加Maven仓库
+        }*/
+
+        /*
+        maven {
+            credentials { // 访问需要认证的Maven仓库
+                username 'username'
+                password 'password'
+            }
+            url 'http;//' // 从url添加Maven仓库
+        }
+        */
+
+        /*
+        flatDir {
+            dirs 'lib' // 通过flatDir语法将一个文件目录作为一个仓库
+        }
+        */
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
@@ -12,6 +40,10 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+
+    tasks.withType(JavaCompiler) {
+        options.encoding = "UTF-8"
     }
 }
 
@@ -21,6 +53,12 @@ allprojects {
         jcenter()
     }
 }
+
+/*
+subprojects {
+    apply plugin: 'com.android.library' // 所有的项目都是Android库，且都依赖library库
+}
+*/
 
 task clean(type: Delete) {
     delete rootProject.buildDir

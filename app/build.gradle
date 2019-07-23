@@ -7,27 +7,124 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "exercise.arithmetic.kevin.com.arithmeticexercise"
+        applicationId "com.kevin.arithmeticexercise"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    if (file("../test.jks").exists()) {
+        signingConfigs { // 配置签名
+            debug {
+                storeFile file("../test.jks")
+                storePassword '123'
+                keyAlias '123'
+                keyPassword '123'
+            }
+            release {
+                storeFile file("../test.jks")
+                storePassword '123'
+                keyAlias '123'
+                keyPassword '123'
+                /*storePassword getStorePassword()
+                keyAlias getKeyAlias()
+                keyPassword getKeyPassword()*/
+            }
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            shrinkResources true // 打包时去除无用资源
+            minifyEnabled true // 混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            // appId后缀
+            applicationIdSuffix ".debug"
+        }
+
+        jnidebug {
+            initWith debug // 复制debug的属性和签名设置
+            jniDebuggable true // 开启Jni调试
+        }
+    }
+
+    flavorDimensions "type"//, "serverEnv"
+
+    productFlavors {
+        standard {
+            dimension "type"
+            applicationId "com.kevin.arithmeticexercise"
+            versionName "1.0-standard"
+        }
+
+        demo {
+            dimension "type"
+            applicationId "com.kevin.arithmeticexercise.debug"
+            versionName "1.0-demo"
         }
     }
 }
 
+    /**
+     * 对于不同的 Manifest 文件中同一个属性的不同值，在合并的时候还需要优先级来进行判断，
+     * 用高优先级的去覆盖低优先级的。关于优先级定义如下：
+     *
+     * 最高优先级：buildType 的设置
+     * 次高优先级：productFlavor 的设置
+     * 中等优先级：在 src/main 目录下的 Manifest 文件
+     * 最低优先级：各种依赖和第三方库的设置
+     * 合并规则：概括来说是这样：
+     *
+     * 合并之前，先将每个 module 里面的 buildType 内容写到 Manifest 里面去，比如你在 buildType 里面的 minSdkVersion 和targetSdkVersion
+     * 以及 versionCode 和 VersionName 等等（此时合并后的 Manifest 文件可以在 app/intermediates/manifests/* 目录下查看）。
+     * 对于同一个属性，当高优先级和低优先级都为非默认值时，如果可以匹配，那直接合并，不能匹配，就会产生冲突（这种是针对两个不同的 module 来说）。
+     * 不管高优先级还是低优先级，如果其中一个没有设置该属性或者设置为默认的属性值，而另外一个设置了非默认的属性值，则合并的结果就是非默认的属性值，
+     * 在项目编译后，可以查看 Manifest 的合并记录，该文件目录为：app/intermediates/outputs/logs/manifest*.txt。
+     */
+
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //implementation files('libs/a.jar', 'libs/b.jar')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /*
+    api 'com.android.support:support-annotations:27.1.1'
+    compileOnly 'com.android.support:support-v4:27.1.1'
+    runtimeOnly 'com.android.support:support-v13:27.1.1'
+    testImplementation 'com.android.support:appcompat-v7:27.1.1'
+    androidTestImplementation 'com.android.support:support-vector-drawable:27.1.1'
+    debugImplementation 'com.android.support:design:27.1.1'
+    releaseImplementation 'com.android.support:gridlayout-v7:27.1.1'*/
+
+    /**
+     * compile：对所有 buildType 以及 flavors 进行编译并打包到 apk 。
+     * provided：和 compile 相似，但只在编译时使用，几只参与编译，不打包到最终 apk 。
+     * apk：只会打包到 apk 中，不参与编译，所以不能在项目代码中使用相应库中的方法。
+     * test compile：相比于 compile ，仅仅针对单元测试的代码编译打包。
+     * debug compile：仅针对 debug 模式编译打包。
+     * release compile：仅针对 release 模式编译打包。
+     */
+}
+
+
+ext {
+    if (!project.hasProperty("extraProperties")) {
+        extraProperties = "4321"
+    }
+}
+
+task printProperties() { // gradlew printProperties       // gradlew -PextraProperties=112233 printProperties   命令行设置参数值，优先级最高
+    doLast {
+        println "extraProperties=$extraProperties"
+    }
 }

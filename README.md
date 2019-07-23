@@ -1,6 +1,7 @@
 # [JAVA常用的八种排序算法](./arithmetic/src/main/java/com/kevin/arithmetic/sort/README.md)
 <br/>
 <br/>
+
 # ArithmeticExercise
 Company algorithm exercise
 <br/>
@@ -193,24 +194,52 @@ false
 <br/>
 <br/>
 
+## [序号10: 爬楼梯](./arithmetic/src/main/java/com/kevin/arithmetic/Solution10.java)
+难度：一般 时间限制：1000ms 内存限制：10M <br/>
+
+描述：
+
+在你面前有一个n阶的楼梯，你一步只能上1阶或2阶。 请问计算出你可以采用多少种不同的方式爬完这个楼梯。
+
+输入: 一个正整数，表示这个楼梯一共有多少阶
+
+输出: 一个正整数，表示有多少种不同的方式爬完这个楼梯
+
+输入样例
+5
+10
+
+输出样例
+8
+89
+
 <br/>
 <br/>
-## [序号：#87 美丽字符串](./arithmetic/src/main/java/com/kevin/arithmetic/Solution87.java)
+
+## [序号87: 美丽字符串](./arithmetic/src/main/java/com/kevin/arithmetic/Solution87.java)<br/>
+
 难度：困难  时间限制：1000ms  内存限制：10M
+
 描述
+
 定义一个美丽字符串，对于字符串S，S中只包含小写的a-z字符，存在2条规则：
+
 规则1：S中每个字符出现的次数一样，如abc，每个字符出现1次，aabbcc，每个字符出现2次
+
 规则2：添加或删除S中的一个字符后，使得S中每个字符出现的次数一样，如abca，删除一个字符a，则变为abc后每个字符出现1次
              又例如aabcbbcc,添加一个字符a，则变为aabcbbcca，每个字符出现3次
 对于字符串S，若满足规则1，2中任意一条规则，则称为美丽的字符串
 
 输入
+
 一个字符串S，只包含a-z的小写字符
 
 输出
+
 判断该字符串是否为美丽的字符串，若是则输出YES，若不是则输出NO
 
 输入样例
+
 abc
 
 aabbccc
@@ -218,6 +247,7 @@ aabbccc
 aaccbd
 
 输出样例
+
 YES
 
 YES

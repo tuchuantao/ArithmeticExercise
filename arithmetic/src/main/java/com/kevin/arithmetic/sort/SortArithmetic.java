@@ -26,17 +26,17 @@ public class SortArithmetic {
      *
      * @param arr
      */
-    public static void insertSort(int[] arr) {
+    public static void insertSort(String[] arr) {
         int temp = 0;
         int len = arr.length;
         for (int i = 1; i < len; i++) {
-            temp = arr[i];
+            temp = Integer.valueOf(arr[i]);
             int j = i - 1;
-            while (j >= 0 && arr[j] > temp) {
+            while (j >= 0 && Integer.valueOf(arr[j]) > temp) {
                 arr[j + 1] = arr[j];
                 j--;
             }
-            arr[j + 1] = temp;
+            arr[j + 1] = String.valueOf(temp);
 
             /*for (int j = i - 1; j >= 0; j--) {
                 if (arr[j] > temp) {
