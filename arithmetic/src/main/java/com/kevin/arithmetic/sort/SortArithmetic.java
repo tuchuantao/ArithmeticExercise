@@ -13,8 +13,10 @@ public class SortArithmetic {
         //shellSort(arr);
         //selectSort(arr);
         //bubbleSort(arr);
-        //quickSort(arr, 0, arr.length - 1);
-        mergeSort(arr);
+        //quickSort(arr);
+        //mergeSort(arr);
+        heapSort(arr);
+        //baseSort(arr);
 
         for (int i = 0; i < arr.length; i++) {
             System.out.printf("arr[%d]=%d, ", i, arr[i]);
@@ -26,17 +28,17 @@ public class SortArithmetic {
      *
      * @param arr
      */
-    public static void insertSort(String[] arr) {
+    public static void insertSort(int[] arr) {
         int temp = 0;
         int len = arr.length;
         for (int i = 1; i < len; i++) {
-            temp = Integer.valueOf(arr[i]);
+            temp = arr[i];
             int j = i - 1;
-            while (j >= 0 && Integer.valueOf(arr[j]) > temp) {
+            while (j >= 0 && arr[j] > temp) {
                 arr[j + 1] = arr[j];
                 j--;
             }
-            arr[j + 1] = String.valueOf(temp);
+            arr[j + 1] = temp;
 
             /*for (int j = i - 1; j >= 0; j--) {
                 if (arr[j] > temp) {
@@ -101,10 +103,63 @@ public class SortArithmetic {
 
     /**
      * 堆排序
+     * <p>
+     * 1.下标为i的节点，父节点坐标为(i-1)/2；
+     * <p>
+     * 2.下标为i的节点，左子节点坐标为2*i+1，右子节点为2*i+2。
+     *
      * @param arr
      */
-    public static void heapSort(int[] arr) {
+    public static void  heapSort(int[] arr) {
+        int len = arr.length;
+        for (int i = 0; i < len - 1; i++) { // len - 1
+            // 构建大堆
+            buildMaxHeap(arr, len - 1 - i);
 
+            // 交换堆顶和最后一个元素
+            int temp = arr[0];
+            arr[0] = arr[len - 1 -i];
+            arr[len - 1 - i] = temp;
+        }
+    }
+
+    /**
+     * 构建大堆
+     *
+     * @param arr       待排序列
+     * @param lastIndex
+     */
+    private static void buildMaxHeap(int[] arr, int lastIndex) {
+        // 从lastIndex处节点（最后一个节点）的父节点开始
+        for (int i = (lastIndex - 1) / 2; i >= 0; ) {
+            // parent保存正在判断的节点
+            int parent = i;
+            // 如果当前k节点的子节点存在
+            while (parent * 2 + 1 <= lastIndex) {
+                // parent节点的左子节点的索引
+                int biggerIndex = parent * 2 + 1;
+                // 存在右子节点，判断左右子节点的大小
+                if (biggerIndex + 1 <= lastIndex && arr[biggerIndex] < arr[biggerIndex + 1]) {
+                    biggerIndex++;
+                }
+                // 如果父节点别子节点的最大值要小
+                if (arr[parent] < arr[biggerIndex]) {
+                    int temp = arr[parent];
+                    arr[parent] = arr[biggerIndex];
+                    arr[biggerIndex] = temp;
+
+                    // 将biggerIndex赋予k，开始while循环的下一次循环，重新保证parent节点的值大于其左右子节点的值
+                    parent = biggerIndex;
+                } else {
+                    break;
+                }
+            }
+
+            i = i - 2;
+            if (i == -1) {
+                i = 0;
+            }
+        }
     }
 
     /**
@@ -128,6 +183,7 @@ public class SortArithmetic {
 
     /**
      * 快速排序
+     *
      * @param arr
      */
     public static void quickSort(int[] arr, int begin, int end) {
@@ -162,6 +218,7 @@ public class SortArithmetic {
 
     /**
      * 归并排序
+     *
      * @param arr
      */
     public static void mergeSort(int[] arr) {
@@ -173,10 +230,10 @@ public class SortArithmetic {
             for (int i = 0; i < len / mergeLen + 1; i++) {
                 int maxIndex = i * mergeLen + mergeLen >= len ? len : i * mergeLen + mergeLen;
                 for (int j = i * mergeLen + mergeLen / 2; j < maxIndex; j++) {
-                    for (int k= i * mergeLen; k < j; k++) {
+                    for (int k = i * mergeLen; k < j; k++) {
                         if (arr[k] > arr[j]) {
                             temp = arr[j];
-                            for (int l = j; l > k ; l--) {
+                            for (int l = j; l > k; l--) {
                                 arr[l] = arr[l - 1];
                             }
                             arr[k] = temp;
@@ -189,6 +246,7 @@ public class SortArithmetic {
 
     /**
      * 基数排序
+     *
      * @param arr
      */
     public static void baseSort(int[] arr) {

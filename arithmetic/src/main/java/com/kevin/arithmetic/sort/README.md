@@ -1,12 +1,12 @@
 [代码](./SortArithmetic.java)
 
-一、稳定性:
+**一、稳定性:**
 
-　   稳定：冒泡排序、插入排序、归并排序和基数排序
+　　稳定：冒泡排序、插入排序、归并排序和基数排序
 
 　　不稳定：选择排序、快速排序、希尔排序、堆排序
 
-二、平均时间复杂度
+**二、平均时间复杂度**
 
 　　O(n^2):直接插入排序，简单选择排序，冒泡排序。
 
@@ -16,7 +16,7 @@
 
 　　其中，快排是最好的， 其次是归并和希尔，堆排序在数据量很大时效果明显。
 
-三、排序算法的选择
+**三、排序算法的选择**
 
 　　1.数据规模较小
 
@@ -37,8 +37,17 @@
     　　（2）对稳定性没要求，宜用堆排序
 
 　　4.序列初始基本有序（正序），宜用直接插入，冒泡
+<br/>
 
- 各算法复杂度如下：
- </br>
- <img src="https://github.com/Kevin-TCT/Utils/blob/master/app/imgs/1.png" width = "644" height = "449" alt="图片名称" align=center />
+**各算法复杂度如下：**
+
+ <img src="../../../../../../../img/sort.png" width = "644" height = "449" alt="图片名称" align=center />
  
+ 
+<br/>
+<br/>
+<br/>
+
+[八种排序算法](https://www.cnblogs.com/chinaifae/p/10320814.html) <br/>
+[other](https://www.cnblogs.com/wuxiangli/p/6399266.html) <br/>
+[堆排序](https://www.cnblogs.com/hwtx/p/9693338.html) <br/>
