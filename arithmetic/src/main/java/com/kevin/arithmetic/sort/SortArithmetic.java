@@ -131,7 +131,7 @@ public class SortArithmetic {
      */
     private static void buildMaxHeap(int[] arr, int lastIndex) {
         // 从lastIndex处节点（最后一个节点）的父节点开始
-        for (int i = (lastIndex - 1) / 2; i >= 0; ) {
+        for (int i = (lastIndex - 1) / 2; i >= 0; i--) {
             // parent保存正在判断的节点
             int parent = i;
             // 如果当前k节点的子节点存在
@@ -142,7 +142,7 @@ public class SortArithmetic {
                 if (biggerIndex + 1 <= lastIndex && arr[biggerIndex] < arr[biggerIndex + 1]) {
                     biggerIndex++;
                 }
-                // 如果父节点别子节点的最大值要小
+                // 如果父节点比子节点的最大值要小
                 if (arr[parent] < arr[biggerIndex]) {
                     int temp = arr[parent];
                     arr[parent] = arr[biggerIndex];
@@ -153,11 +153,6 @@ public class SortArithmetic {
                 } else {
                     break;
                 }
-            }
-
-            i = i - 2;
-            if (i == -1) {
-                i = 0;
             }
         }
     }
