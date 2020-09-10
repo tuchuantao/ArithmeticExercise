@@ -10,31 +10,31 @@ public class Solution {
         System.out.print(result);
     }
 
-private static String solution(String line) {
-    // 在此处理单行数据
-    String[] array = line.split(" ");
-    java.util.HashMap<Integer, Integer> map = new java.util.HashMap<>();
-    for (String numberStr : array) {
-        Integer number = Integer.valueOf(numberStr);
-        Integer lastTimes = map.get(number);
-        if (lastTimes == null) {
-            map.put(number, 1);
-        } else {
-            map.put(number, ++lastTimes);
+    private static String solution(String line) {
+        // 在此处理单行数据
+        String[] array = line.split(" ");
+        java.util.HashMap<Integer, Integer> map = new java.util.HashMap<>();
+        for (String numberStr : array) {
+            Integer number = Integer.valueOf(numberStr);
+            Integer lastTimes = map.get(number);
+            if (lastTimes == null) {
+                map.put(number, 1);
+            } else {
+                map.put(number, ++lastTimes);
+            }
         }
+        int maxNumber = 0;
+        for (java.util.Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            int sum = entry.getKey() * entry.getValue();
+            Integer nextNumberTimes = map.get(entry.getKey() + 1);
+            if (nextNumberTimes != null) {
+                sum += entry.getKey() * nextNumberTimes;
+            }
+            if (sum > maxNumber) {
+                maxNumber = sum;
+            }
+        }
+        // 返回处理后的结果
+        return String.valueOf(maxNumber);
     }
-    int maxNumber = 0;
-    for (java.util.Map.Entry<Integer, Integer> entry : map.entrySet()) {
-        int sum = entry.getKey() * entry.getValue();
-        Integer nextNumberTimes = map.get(entry.getKey() + 1);
-        if (nextNumberTimes != null) {
-            sum += entry.getKey() * nextNumberTimes;
-        }
-        if (sum > maxNumber) {
-            maxNumber = sum;
-        }
-    }
-    // 返回处理后的结果
-    return String.valueOf(maxNumber);
-}
 }
