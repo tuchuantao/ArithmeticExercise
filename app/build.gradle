@@ -68,6 +68,11 @@ android {
             versionName "1.0-demo"
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '27.0.2'
 }
 
     /**
