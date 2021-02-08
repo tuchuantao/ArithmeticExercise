@@ -1,6 +1,5 @@
 package com.kevin.arithmetic.heap;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -25,16 +24,20 @@ public class HeapExercise {
     public static void main(String[] args) {
         int[] arr = new int[]{100, 3, 1, 17, 35, 56, 89, 43, 65, 2};
 
-        //buildMaxHeap(arr);
+//          buildMaxHeap(arr);
         buildMaxHeapOptimize(arr);
         printArr(arr);
 
-        arr = insertFoMaxHeap(arr, 80);
-        arr = insertFoMaxHeap(arr, 101);
+//        arr = insertFoMaxHeap(arr, 80);
+//        printArr(arr);
+//        arr = insertFoMaxHeap(arr, 101);
+//        printArr(arr);
+
+        arr = deleteForMaxHeap(arr);
         printArr(arr);
 
-        //buildMinHeap(arr);
-        //printArr(arr);
+//        buildMinHeap(arr);
+//        printArr(arr);
     }
 
     /**
@@ -49,6 +52,7 @@ public class HeapExercise {
         int lastIndex = arr.length - 1;
         // 从最后一个节点的父节点开始
         for(int i = (lastIndex - 1) / 2; i >= 0; i--) {
+            System.out.println("i=" + i);
             int parent = i;
             while (parent * 2 + 1 <= lastIndex) { // 有左子节点
                 int leftIndex = parent * 2 + 1;
@@ -74,7 +78,7 @@ public class HeapExercise {
     private static void buildMaxHeapOptimize(int[] arr) {
         int lastIndex = arr.length - 1;
         for (int i = (lastIndex - 1) / 2; i >= 0; i--) {
-            int beginParent = arr[i];
+            int beginParent = arr[i]; // 缓存最开始的父节点，在调整子树时，不用每次都将父节点写入左右孩子中的最大位置
             int parentIndex = i;
             while (parentIndex * 2 + 1 <= lastIndex) {
                 int leftIndex = parentIndex * 2 + 1;
@@ -101,6 +105,7 @@ public class HeapExercise {
     private static void buildMinHeap(int[] arr) {
         int lastIndex = arr.length - 1;
         for (int i = (lastIndex - 1) / 2; i >= 0; i--) {
+            int originParent = arr[i];
             int parent = i;
             while (parent * 2 + 1 <= lastIndex) { // 有左子节点
                 int leftIndex = parent * 2 + 1;
@@ -109,27 +114,23 @@ public class HeapExercise {
                 if (rightIndex <= lastIndex && arr[rightIndex] < arr[minIndex]) {
                     minIndex = rightIndex;
                 }
-                if (arr[minIndex] < arr[parent]) {
-                    int temp = arr[parent];
+                if (arr[minIndex] < originParent) {
                     arr[parent] = arr[minIndex];
-                    arr[minIndex] = temp;
                     parent = minIndex; // 节点改变后，需要调整相应子节点的顶
                 } else {
                     break;
                 }
             }
+            arr[parent] = originParent;
         }
     }
 
     /**
-     *
-     * int[] arr2=new int[arr1.length*2]
-     * System.arraycopy(原数组名，起始下标，新数组名，起始下标，复制长度);
-     *
-     * 使用ArrayList实现堆
+     * 树尾插入，然后调整
      *
      * @param arr
      * @param item
+     * @return
      */
     private static int[] insertFoMaxHeap(int[] arr, int item) {
         int[] newArr = Arrays.copyOf(arr, arr.length + 1);
@@ -149,12 +150,34 @@ public class HeapExercise {
         return newArr;
     }
 
-    private static int[] deleteForMaxHeap(int[] arr, int deleteIndex) {
-        if (deleteIndex < 0 && deleteIndex >= arr.length) {
-            return arr;
+    /**
+     * 最大堆的删除操作，总是从堆的根结点删除元素，然后将最后一个节点移动到根节点，再去构建大根堆
+     * @param arr
+     * @return
+     */
+    private static int[] deleteForMaxHeap(int[] arr) {
+        int len = arr.length;
+        arr[0] = arr[--len];
+        int[] newArr = Arrays.copyOf(arr, len);
+        int parentIndex = 0;
+        int left;
+        int right;
+        int bigIndex;
+        while (parentIndex * 2 + 1 < len) {
+            left = parentIndex * 2 + 1;
+            right = left + 1;
+            bigIndex = left;
+            if (right < len && newArr[right] > newArr[bigIndex]) {
+                bigIndex = right;
+            }
+            if (newArr[bigIndex] > newArr[parentIndex]) {
+                int temp = newArr[parentIndex];
+                newArr[parentIndex] = newArr[bigIndex];
+                newArr[bigIndex] = temp;
+                parentIndex = bigIndex;
+            }
         }
-
-        return arr;
+        return newArr;
     }
 
     private static void printArr(int[] arr) {
