@@ -1,4 +1,4 @@
-package com.kevin.arithmetic;
+package com.kevin.arithmetic.mi;
 
 /**
  * Kevin-Tu on 2018/5/14.

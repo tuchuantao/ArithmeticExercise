@@ -1,4 +1,4 @@
-package com.kevin.arithmetic;
+package com.kevin.arithmetic.mi;
 
 
 /**
