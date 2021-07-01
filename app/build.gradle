@@ -37,8 +37,8 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled true // 混淆 & 去除无效代码
             shrinkResources true // 打包时去除无用资源
-            minifyEnabled true // 混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
