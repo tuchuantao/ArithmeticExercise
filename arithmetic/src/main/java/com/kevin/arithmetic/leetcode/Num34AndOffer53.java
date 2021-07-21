@@ -4,7 +4,7 @@ package com.kevin.arithmetic.leetcode;
  * Created by tuchuantao on 2021/7/16
  * Desc:
  */
-public class Offer53AndNum34 {
+public class Num34AndOffer53 {
 
   /**
    * 统计一个数字在排序数组中出现的次数。
@@ -64,7 +64,7 @@ public class Offer53AndNum34 {
   }
 
   public static void main(String[] args) {
-    int result = new Offer53AndNum34().search(new int[]{}, 1);
+    int result = new Num34AndOffer53().search(new int[]{}, 1);
 //    int result = new Offer53AndNum34().search(new int[]{1}, 1);
     System.out.println("result=" + result);
   }
