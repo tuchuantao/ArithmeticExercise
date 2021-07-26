@@ -54,11 +54,7 @@ public class Num1143 {
         }
       }
     }
-    int maxLen = 0;
-    for (int i = 1; i <= len2; i++) {
-      maxLen = Math.max(maxLen, dp[len1][i]);
-    }
-    return maxLen;
+    return dp[len1][len2];
   }
 
   public static void main(String[] args) {
