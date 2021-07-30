@@ -1,5 +1,7 @@
 package com.kevin.arithmetic.leetcode;
 
+import com.kevin.arithmetic.tree.TreeNode;
+
 /**
  * Created by tuchuantao on 2021/7/28
  * Desc:
@@ -47,21 +49,5 @@ public class Num101 {
       return false;
     }
     return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
-  }
-
-  public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {}
-
-    TreeNode(int val) { this.val = val; }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-      this.val = val;
-      this.left = left;
-      this.right = right;
-    }
   }
 }

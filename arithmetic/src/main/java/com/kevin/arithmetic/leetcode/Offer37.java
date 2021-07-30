@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.kevin.arithmetic.tree.TreeNode;
+
 /**
  * Created by tuchuantao on 2021/6/30
  * Desc:
@@ -70,13 +72,5 @@ public class Offer37 {
     root.left = realDeserialize(dataList);
     root.right = realDeserialize(dataList);
     return root;
-  }
-
-  public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) { val = x; }
   }
 }

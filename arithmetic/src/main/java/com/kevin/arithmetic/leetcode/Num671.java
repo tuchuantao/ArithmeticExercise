@@ -3,6 +3,8 @@ package com.kevin.arithmetic.leetcode;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import com.kevin.arithmetic.tree.TreeNode;
+
 /**
  * Created by tuchuantao on 2021/7/27
  * Desc:
@@ -59,21 +61,5 @@ public class Num671 {
     list.add(node.val);
     firstTraversal(node.left, list);
     firstTraversal(node.right, list);
-  }
-
-  public static class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {}
-
-    TreeNode(int val) { this.val = val; }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-      this.val = val;
-      this.left = left;
-      this.right = right;
-    }
   }
 }

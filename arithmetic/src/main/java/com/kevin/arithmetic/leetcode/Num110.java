@@ -1,5 +1,7 @@
 package com.kevin.arithmetic.leetcode;
 
+import com.kevin.arithmetic.tree.TreeNode;
+
 /**
  * Created by tuchuantao on 2021/7/29
  * Desc:
@@ -60,19 +62,6 @@ public class Num110 {
       return -1;
     } else {
       return Math.max(leftHeight, rightHeight) + 1;
-    }
-  }
-
-  public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-      this.val = val;
-      this.left = left;
-      this.right = right;
     }
   }
 }
