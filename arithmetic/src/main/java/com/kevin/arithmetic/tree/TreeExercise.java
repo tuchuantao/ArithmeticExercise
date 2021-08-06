@@ -4,7 +4,7 @@ package com.kevin.arithmetic.tree;
 public class TreeExercise {
 
     public static void main(String[] args) {
-        Node root = initTree();
+        TreeNode root = initTree();
 
         System.out.print("前序遍历： ");
         firstTraversal(root);
@@ -28,37 +28,37 @@ public class TreeExercise {
 
     }
 
-    private static void firstTraversal(Node rootNode) {
-        if (rootNode == null) {
+    private static void firstTraversal(TreeNode node) {
+        if (node == null) {
             return;
         }
-        System.out.print(rootNode.value + " , ");
+        System.out.print(node.val + " , ");
 
-        firstTraversal(rootNode.left);
+        firstTraversal(node.left);
 
-        firstTraversal(rootNode.right);
+        firstTraversal(node.right);
     }
 
-    private static void centerTraversal(Node rootNode) {
-        if (rootNode == null) {
+    private static void centerTraversal(TreeNode node) {
+        if (node == null) {
             return;
         }
-        centerTraversal(rootNode.left);
+        centerTraversal(node.left);
 
-        System.out.print(rootNode.value + " , ");
+        System.out.print(node.val + " , ");
 
-        centerTraversal(rootNode.right);
+        centerTraversal(node.right);
     }
 
-    private static void endTraversal(Node rootNode) {
-        if (rootNode == null) {
+    private static void endTraversal(TreeNode node) {
+        if (node == null) {
             return;
         }
-        endTraversal(rootNode.left);
+        endTraversal(node.left);
 
-        endTraversal(rootNode.right);
+        endTraversal(node.right);
 
-        System.out.print(rootNode.value + " , ");
+        System.out.print(node.val + " , ");
     }
 
     /**
@@ -69,25 +69,25 @@ public class TreeExercise {
      *        1   5  8
      * @return
      */
-    private static Node initTree() {
-        Node rootTree = new Node(10);
-        Node tree1 = new Node(7);
-        Node tree11 = new Node(18);
+    private static TreeNode initTree() {
+        TreeNode rootTree = new TreeNode(10);
+        TreeNode tree1 = new TreeNode(7);
+        TreeNode tree11 = new TreeNode(18);
         rootTree.left = tree1;
         rootTree.right = tree11;
 
-        Node tree2 = new Node(4);
-        Node tree22 = new Node(9);
-        Node tree222 = new Node(14);
-        Node tree2222 = new Node(22);
+        TreeNode tree2 = new TreeNode(4);
+        TreeNode tree22 = new TreeNode(9);
+        TreeNode tree222 = new TreeNode(14);
+        TreeNode tree2222 = new TreeNode(22);
         tree1.left = tree2;
         tree1.right = tree22;
         tree11.left = tree222;
         tree11.right = tree2222;
 
-        Node tree3 = new Node(1);
-        Node tree33 = new Node(5);
-        Node tree333 = new Node(8);
+        TreeNode tree3 = new TreeNode(1);
+        TreeNode tree33 = new TreeNode(5);
+        TreeNode tree333 = new TreeNode(8);
         tree2.left = tree3;
         tree2.right = tree33;
         tree22.left = tree333;
