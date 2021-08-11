@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Created by tuchuantao on 2021/7/22
  * Desc:
  */
-public class Num138 {
+public class Num138AndOffer35 {
 
   /**
    * 给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。

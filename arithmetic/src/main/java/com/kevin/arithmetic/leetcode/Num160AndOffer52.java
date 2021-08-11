@@ -1,5 +1,7 @@
 package com.kevin.arithmetic.leetcode;
 
+import com.kevin.arithmetic.linkedlist.ListNode;
+
 /**
  * Created by tuchuantao on 2021/7/21
  * Desc:
@@ -87,16 +89,6 @@ public class Num160AndOffer52 {
           isSecondB = true;
         }
       }
-    }
-  }
-
-  public class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-      val = x;
-      next = null;
     }
   }
 }
