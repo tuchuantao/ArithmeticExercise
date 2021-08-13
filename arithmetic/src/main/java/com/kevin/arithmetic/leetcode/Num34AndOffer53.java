@@ -9,23 +9,16 @@ public class Num34AndOffer53 {
   /**
    * 统计一个数字在排序数组中出现的次数。
    * <p>
-   * <p>
-   * <p>
    * 示例 1:
-   * <p>
    * 输入: nums = [5,7,7,8,8,10], target = 8
    * 输出: 2
+   *
    * 示例2:
-   * <p>
    * 输入: nums = [5,7,7,8,8,10], target = 6
    * 输出: 0
    * <p>
-   * <p>
    * 限制：
-   * <p>
    * 0 <= 数组长度 <= 50000
-   * <p>
-   * <p>
    * <p>
    * 注意：本题与主站 34 题相同（仅返回值不同）：https://leetcode-cn
    * .com/problems/find-first-and-last-position-of-element-in-sorted-array/
