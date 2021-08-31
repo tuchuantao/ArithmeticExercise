@@ -14,12 +14,8 @@ public class ThreeThread {
     public static void main(String[] args) {
         //new Solution().solutionFun(3, 100);
         //new Solution().solutionFun3(3, 100);
-        new Solution().threadPrint(3, 100);
     }
-}
 
-
-class Solution {
     private volatile int number = 1;
 
     /**
@@ -120,70 +116,6 @@ class Solution {
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-            }).start();
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void threadPrint(int threadCount, int maxNumber) {
-        Semaphore[] arrays = new Semaphore[threadCount];
-        for (int i = 0; i < threadCount; i++) {
-            arrays[i] = new Semaphore(1);
-            if (i > 0) {
-                try {
-                    arrays[i].acquire();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        for (int i = 1; i <= threadCount; i++) {
-            int index = i % threadCount;
-            new Thread(() -> {
-                while (number <= maxNumber) {
-                    if (number % threadCount == index) {
-                        try {
-                            arrays[index - 1 >= 0 ? index - 1 : threadCount - 1].acquire();
-                            System.out.println("Thread :" + index + "  number=" + number);
-                            number++;
-                            arrays[index].release();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
                 }
             }).start();
         }
