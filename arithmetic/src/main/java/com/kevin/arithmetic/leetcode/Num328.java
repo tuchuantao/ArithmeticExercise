@@ -27,7 +27,7 @@ public class Num328 {
    * 链接：https://leetcode-cn.com/problems/odd-even-linked-list
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
-  public ListNode oddEvenList(ListNode head) {
+  public ListNode oddEvenList1(ListNode head) {
     if (head == null || head.next == null) {
       return head;
     }
@@ -50,4 +50,20 @@ public class Num328 {
     temp.next = evenHead.next;
     return head;
   }
+
+//  public ListNode oddEvenList(ListNode head) {
+//    if (head == null) {
+//      return head;
+//    }
+//    ListNode evenHead = head.next;
+//    ListNode odd = head, even = evenHead;
+//    while (even != null && even.next != null) {
+//      odd.next = even.next;
+//      odd = odd.next;
+//      even.next = odd.next;
+//      even = even.next;
+//    }
+//    odd.next = evenHead;
+//    return head;
+//  }
 }
