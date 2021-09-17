@@ -12,8 +12,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ThreeThread {
 
     public static void main(String[] args) {
-        //new Solution().solutionFun(3, 100);
-        //new Solution().solutionFun3(3, 100);
+        //new ThreeThread().solutionFun(3, 100);
+        new ThreeThread().solutionFun3(3, 100);
     }
 
     private volatile int number = 1;
@@ -92,15 +92,9 @@ public class ThreeThread {
 
         // 初始化信号量
         for (int i = 0; i < threadCount; i++) {
-            semaphores[i] = new Semaphore(1);
-            try {
-                if (i != threadCount - 1) {
-                    semaphores[i].acquire();
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            semaphores[i] = new Semaphore(0);
         }
+        semaphores[0].release();
 
         for (int i = 0; i < threadCount; i++) {
             final int index = i;
