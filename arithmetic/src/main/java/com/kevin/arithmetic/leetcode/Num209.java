@@ -66,4 +66,31 @@ public class Num209 {
 
     return subLen;
   }
+
+  public int minSubArrayLen22(int target, int[] nums) {
+    int left = 0;
+    int right = left;
+    int sum = 0;
+    int subLen = 0;
+    int len = nums.length;
+    while (right < len) {
+      sum += nums[right];
+      while (left < right && sum - nums[left] >= target) {
+        sum -= nums[left];
+        left++;
+      }
+      if (sum >= target) {
+        if (subLen == 0) {
+          subLen = right - left + 1;
+        } else {
+          subLen = Math.min(subLen, right - left + 1);
+        }
+        sum -= nums[left];
+        left++;
+      }
+      right++;
+    }
+
+    return subLen;
+  }
 }
