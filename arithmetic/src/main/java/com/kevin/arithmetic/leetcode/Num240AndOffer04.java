@@ -29,7 +29,7 @@ public class Num240AndOffer04 {
    * 链接：https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
-  public boolean findNumberIn2DArray(int[][] matrix, int target) {
+  public boolean findNumberIn2DArray1(int[][] matrix, int target) {
     int raw = matrix.length;
     if (raw == 0) {
       return false;
@@ -52,6 +52,29 @@ public class Num240AndOffer04 {
         }
       }
       col = right + 1;
+    }
+    return false;
+  }
+
+  public boolean findNumberIn2DArray(int[][] matrix, int target) {
+    int raw = matrix.length;
+    if (raw == 0) {
+      return false;
+    }
+    int col = matrix[0].length;
+    if (col == 0) {
+      return false;
+    }
+    int indexRaw = 0;
+    int indexCol = col - 1;
+    while (indexRaw < raw && indexCol >= 0) {
+      if (matrix[indexRaw][indexCol] == target) {
+        return true;
+      } else if (matrix[indexRaw][indexCol] > target) {
+        indexCol--;
+      } else {
+        indexRaw++;
+      }
     }
     return false;
   }
