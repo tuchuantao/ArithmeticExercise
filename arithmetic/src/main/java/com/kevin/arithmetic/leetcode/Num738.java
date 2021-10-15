@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by tuchuantao on 2021/10/14
- * Desc:
+ * Desc: 单调递增的数字
  */
 public class Num738 {
   /**
