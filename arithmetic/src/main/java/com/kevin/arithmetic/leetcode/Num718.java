@@ -2,7 +2,6 @@ package com.kevin.arithmetic.leetcode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by tuchuantao on 2021/9/26

@@ -61,5 +61,4 @@ public class Num54 {
     }
     return list;
   }
-  // [[2,5],[8,4],[0,-1]]
 }
