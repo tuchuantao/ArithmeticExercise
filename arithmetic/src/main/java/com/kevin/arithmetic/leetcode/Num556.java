@@ -42,7 +42,7 @@ public class Num556 {
     if (index == -1) {
       return -1;
     }
-    Arrays.sort(arr, index, len);
+    Arrays.sort(arr, index, len); // 升序
     for (int i = index; i < len; i++) {
       if (arr[i] > arr[index - 1]) {
         char temp = arr[i];
