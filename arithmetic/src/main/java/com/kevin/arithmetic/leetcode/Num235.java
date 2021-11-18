@@ -7,7 +7,7 @@ import com.kevin.arithmetic.tree.TreeNode;
 
 /**
  * Created by tuchuantao on 2021/8/4
- * Desc:
+ * Desc: 二叉搜索树的最近公共祖先
  */
 public class Num235 {
   /**
@@ -36,6 +36,7 @@ public class Num235 {
   ArrayList<TreeNode> path = new ArrayList();
   ArrayList<ArrayList<TreeNode>> targetPath = new ArrayList();
   public TreeNode lowestCommonAncestor11(TreeNode root, TreeNode p, TreeNode q) { // 没有利用二叉搜索树的特性
+    deepTraversal(root, p, q);
     int len = Math.min(targetPath.get(0).size(), targetPath.get(1).size());
     TreeNode node = null;
     for (int i = 0; i < len; i++) {
