@@ -4,7 +4,7 @@ import com.kevin.arithmetic.tree.TreeNode;
 
 /**
  * Created by tuchuantao on 2021/8/4
- * Desc:
+ * Desc: 路径总和
  */
 public class Num112 {
   /**
