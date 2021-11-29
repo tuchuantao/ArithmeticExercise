@@ -90,7 +90,7 @@ public class Num208 {
     }
   }
 
-  class Node {
+  private class Node {
 
     public char val;
     public Node[] childs = new Node[26];

@@ -86,7 +86,7 @@ public class Num138AndOffer35 {
     return newNode;
   }
 
-  static class Node {
+  private static class Node {
     int val;
     Node next;
     Node random;
