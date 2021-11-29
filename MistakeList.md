@@ -6,5 +6,6 @@
 ### 2、[构建乘积数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Offer66.java)
 不使用除法，上下三角 <br/>
 
-### 3、
+### 3、[二叉搜索树的后序遍历序列](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Offer33.java)
+单调栈 <br/>
  

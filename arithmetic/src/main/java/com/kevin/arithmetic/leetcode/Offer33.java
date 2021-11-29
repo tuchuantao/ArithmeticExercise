@@ -72,7 +72,7 @@ public class Offer33 {
     return p == j && recur(postorder, i, m - 1) && recur(postorder, m, j - 1);
   }
 
-  public boolean verifyPostorder2(int[] postorder) {
+  public boolean verifyPostorder2(int[] postorder) { // 单调栈
     Stack<Integer> stack = new Stack<>();
     int root = Integer.MAX_VALUE;
     for(int i = postorder.length - 1; i >= 0; i--) {
@@ -85,7 +85,7 @@ public class Offer33 {
   }
 
   public static void main(String[] args) {
-    boolean result = new Offer33().verifyPostorder(new int[]{7, 4, 6, 5});
+    boolean result = new Offer33().verifyPostorder2(new int[]{1,3,2,7,12,8,9,11,10,5});
     System.out.println("result=" + result);
   }
 }
