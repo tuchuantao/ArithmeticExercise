@@ -8,4 +8,9 @@
 
 ### 3、[二叉搜索树的后序遍历序列](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Offer33.java)
 单调栈 <br/>
+
+### 4、[只出现一次的数字 III](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num260.java)
+分组异或 <br/>
+
+### 5、[数组中数字出现的次数 II](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num137.java)
  
