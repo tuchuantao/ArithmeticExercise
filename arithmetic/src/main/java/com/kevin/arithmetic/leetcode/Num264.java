@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by tuchuantao on 2021/8/9
- * Desc:
+ * Desc: 丑数 II
  */
 public class Num264 {
   /**
@@ -39,7 +39,6 @@ public class Num264 {
       for (int j = 0; j < 3; j++) {
         nums[j] = dp[points[j]] * factors[j];
         min = Math.min(min, nums[j]);
-
       }
       dp[i] = min;
       for (int j = 0; j < 3; j++) {
