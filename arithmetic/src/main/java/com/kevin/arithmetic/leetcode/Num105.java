@@ -1,10 +1,13 @@
 package com.kevin.arithmetic.leetcode;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 import com.kevin.arithmetic.tree.TreeNode;
 
 /**
  * Created by tuchuantao on 2021/8/5
- * Desc:
+ * Desc: 从前序与中序遍历序列构造二叉树
  */
 public class Num105 {
   /**
@@ -57,4 +60,31 @@ public class Num105 {
     node.right = buildTree(preorder, preStart + inIndex - inStart + 1, preEnd, inorder, inIndex + 1, inEnd); // preStart + inIndex - inStart + 1 移动左子树节点个数
     return node;
   }
+
+  public TreeNode buildTree2(int[] preorder, int[] inorder) { // 迭代
+    if (preorder == null || preorder.length == 0) {
+      return null;
+    }
+    TreeNode root = new TreeNode(preorder[0]);
+    Deque<TreeNode> stack = new LinkedList<TreeNode>();
+    stack.push(root);
+    int inorderIndex = 0;
+    for (int i = 1; i < preorder.length; i++) {
+      int preorderVal = preorder[i];
+      TreeNode node = stack.peek();
+      if (node.val != inorder[inorderIndex]) {
+        node.left = new TreeNode(preorderVal);
+        stack.push(node.left);
+      } else {
+        while (!stack.isEmpty() && stack.peek().val == inorder[inorderIndex]) {
+          node = stack.pop();
+          inorderIndex++;
+        }
+        node.right = new TreeNode(preorderVal);
+        stack.push(node.right);
+      }
+    }
+    return root;
+  }
+
 }
