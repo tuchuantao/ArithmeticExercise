@@ -15,8 +15,10 @@
 ### 5、[数组中数字出现的次数 II](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num137.java)
 <br/>
 
-### 5、[乘积小于K的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num713.java)
+### 6、[乘积小于K的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num713.java)
 滑动窗口， r - l + 1 <br/>
 
+### 7、[n个骰子的点数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Offer60.java)
+动态规划 <br/>
 
  
