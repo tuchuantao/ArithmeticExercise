@@ -16,4 +16,7 @@
 <br/>
 
 ### 5、[乘积小于K的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num713.java)
+滑动窗口， r - l + 1 <br/>
+
+
  
