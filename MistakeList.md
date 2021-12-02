@@ -13,4 +13,7 @@
 分组异或 <br/>
 
 ### 5、[数组中数字出现的次数 II](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num137.java)
+<br/>
+
+### 5、[乘积小于K的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num713.java)
  
