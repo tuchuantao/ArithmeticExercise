@@ -21,4 +21,9 @@
 ### 7、[n个骰子的点数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Offer60.java)
 动态规划 <br/>
 
+### 8、[二维区域和检索](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num304.java)
+二维矩阵和 <br/>
+f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
+
+
  

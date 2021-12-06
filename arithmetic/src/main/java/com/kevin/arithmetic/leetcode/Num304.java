@@ -69,7 +69,7 @@ public class Num304 {
   }
 
   int[][] sums;
-//  public NumMatrix(int[][] matrix) {
+//  public NumMatrix(int[][] matrix) { // 二维矩阵
 //    int m = matrix.length;
 //    if (m > 0) {
 //      int n = matrix[0].length;
