@@ -2,8 +2,6 @@ package com.kevin.arithmetic.leetcode;
 
 import java.util.HashMap;
 
-import com.kevin.arithmetic.util.Utils;
-
 /**
  * Created by tuchuantao on 2021/12/7
  * Desc: 两数之和
@@ -38,7 +36,7 @@ public class Num1 {
    * 链接：https://leetcode-cn.com/problems/two-sum
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
-  public int[] twoSum1(int[] nums, int target) { // 哈希
+  public int[] twoSum(int[] nums, int target) { // 哈希
     HashMap<Integer, Integer> map = new HashMap();
     int len = nums.length;
     for (int i = 0; i < len; i++) {
