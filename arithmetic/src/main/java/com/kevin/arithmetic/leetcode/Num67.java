@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/8/3
- * Desc:
+ * Desc: 二进制求和
  */
 public class Num67 {
   /**

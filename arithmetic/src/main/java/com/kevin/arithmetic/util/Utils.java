@@ -6,7 +6,7 @@ package com.kevin.arithmetic.util;
  */
 public class Utils {
 
-  public static <T> void printArr(double[] arr) {
+  public static void printArr(double[] arr) {
     int len = arr.length;
     System.out.print("[");
     for (int i = 0; i < len; i++) {
@@ -15,7 +15,16 @@ public class Utils {
     System.out.println("]");
   }
 
-  public static <T> void printArr(String[] arr) {
+  public static void printArr(String[] arr) {
+    int len = arr.length;
+    System.out.print("[");
+    for (int i = 0; i < len; i++) {
+      System.out.print(arr[i] + ",");
+    }
+    System.out.println("]");
+  }
+
+  public static void printArr(int[] arr) {
     int len = arr.length;
     System.out.print("[");
     for (int i = 0; i < len; i++) {

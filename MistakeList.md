@@ -25,5 +25,8 @@
 二维矩阵和 <br/>
 f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 
+### 8、[比特位计数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num338.java)
+动态规划 - 最高有效位 & 最低有效位 <br/>
+
 
  
