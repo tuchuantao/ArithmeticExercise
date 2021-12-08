@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 寻找数组的中心下标
  */
 public class Num724 {
   /**
