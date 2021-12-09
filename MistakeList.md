@@ -28,5 +28,10 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 ### 8、[比特位计数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num338.java)
 动态规划 - 最高有效位 & 最低有效位 <br/>
 
+### 9、[相交链表](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num160AndOffer52.java)
+
+### 10、[两数相除](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num29.java)
+1、考虑溢出，都转化为负数 <br/>
+2、
 
  

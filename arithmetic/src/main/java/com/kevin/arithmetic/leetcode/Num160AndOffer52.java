@@ -4,7 +4,7 @@ import com.kevin.arithmetic.linkedlist.ListNode;
 
 /**
  * Created by tuchuantao on 2021/7/21
- * Desc:
+ * Desc: 相交链表
  */
 public class Num160AndOffer52 {
 
