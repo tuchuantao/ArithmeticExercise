@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/8/12
- * Desc:
+ * Desc: 验证回文串
  */
 public class Num125AndOffer018 {
   /**
