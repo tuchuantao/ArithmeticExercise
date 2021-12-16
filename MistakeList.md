@@ -34,4 +34,7 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 1、考虑溢出，都转化为负数 <br/>
 2、
 
+### 11、[喧闹和富有](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num851.java)
+拓扑排序 </br>
+
  
