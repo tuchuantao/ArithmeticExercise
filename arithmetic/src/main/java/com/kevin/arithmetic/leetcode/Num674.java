@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/26
- * Desc:
+ * Desc: 回文子串
  */
 public class Num674 {
   /**
