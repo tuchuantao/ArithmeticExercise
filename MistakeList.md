@@ -37,4 +37,5 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 ### 11、[喧闹和富有](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num851.java)
 拓扑排序 </br>
 
- 
+### 12、[适龄的朋友](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num825.java)
+前缀和 </br>
