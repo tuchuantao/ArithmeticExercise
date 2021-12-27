@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 检查是否区域内所有整数都被覆盖
  */
 public class Num1893 {
 
