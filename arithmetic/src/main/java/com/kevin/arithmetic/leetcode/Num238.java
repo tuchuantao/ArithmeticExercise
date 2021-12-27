@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 除自身以外数组的乘积
  */
 public class Num238 {
   /**

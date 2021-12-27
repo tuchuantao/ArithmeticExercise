@@ -1,13 +1,11 @@
 package com.kevin.arithmetic.leetcode;
 
-import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 连续数组
  */
 public class Num525 {
   /**

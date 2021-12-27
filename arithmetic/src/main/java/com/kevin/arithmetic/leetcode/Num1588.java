@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 所有奇数长度子数组的和
  */
 public class Num1588 {
   /**

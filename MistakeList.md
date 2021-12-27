@@ -42,3 +42,6 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 
 ### 13、[检查是否区域内所有整数都被覆盖](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num1893.java)
 差分数组 & 前缀和 </br>
+
+### 14、[航班预订统计](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num1109.java)
+前缀和 </br>

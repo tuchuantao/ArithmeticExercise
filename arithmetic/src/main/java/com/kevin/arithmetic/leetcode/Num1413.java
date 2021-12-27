@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 逐步求和得到正数的最小值
  */
 public class Num1413 {
 

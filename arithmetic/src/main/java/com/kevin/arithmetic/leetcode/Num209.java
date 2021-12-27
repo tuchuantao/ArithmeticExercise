@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 长度最小的子数组
  */
 public class Num209 {
   /**
@@ -28,7 +28,6 @@ public class Num209 {
    * 1 <= target <= 10^9
    * 1 <= nums.length <= 10^5
    * 1 <= nums[i] <= 10^5
-   * 
    *
    * 进阶：
    * 如果你已经实现 O(n) 时间复杂度的解法, 请尝试设计一个 O(n log(n)) 时间复杂度的解法。

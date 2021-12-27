@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 和为 K 的子数组
  */
 public class Num560 {
   /**

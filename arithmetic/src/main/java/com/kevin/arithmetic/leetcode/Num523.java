@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Created by tuchuantao on 2021/7/23
- * Desc:
+ * Desc: 连续的子数组和
  */
 public class Num523 {
   /**

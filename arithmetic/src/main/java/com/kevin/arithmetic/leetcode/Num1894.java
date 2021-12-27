@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/9/10
- * Desc:
+ * Desc: 找到需要补充粉笔的学生编号
  */
 public class Num1894 {
   /**
@@ -49,7 +49,7 @@ public class Num1894 {
    * 链接：https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
-  public int chalkReplacer(int[] chalk, int k) {
+  public int chalkReplacer1(int[] chalk, int k) {
     int len = chalk.length;
     long sum = chalk[0]; // long型Sum,防止溢出
     for (int i = 1; i < len; i++) {
