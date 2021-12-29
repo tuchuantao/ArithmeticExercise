@@ -48,3 +48,6 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 
 ### 15、[适合打劫银行的日子](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num2100.java)
 双数组保存单调长度 </br>
+
+### 16、[相同元素的间隔之和](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num2121.java)
+前缀 & 后缀 </br>
