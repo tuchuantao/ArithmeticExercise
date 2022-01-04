@@ -51,3 +51,6 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 
 ### 16、[相同元素的间隔之和](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num2121.java)
 前缀 & 后缀 </br>
+
+### 17、[和可被 K 整除的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num974.java)
+同余 </br>
