@@ -54,3 +54,6 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 
 ### 17、[和可被 K 整除的子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num974.java)
 同余 </br>
+
+### 17、[和相同的二元子数组](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num930.java)
+边界值 & 缓存时机 </br>
