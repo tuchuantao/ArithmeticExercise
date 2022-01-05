@@ -58,6 +58,7 @@ public class Num1995 {
     return count;
   }
 
+  // nums[a]+nums[b]=nums[d]−nums[c]
   public int countQuadruplets2(int[] nums) {
     int n = nums.length;
     int ans = 0;
@@ -68,6 +69,22 @@ public class Num1995 {
       }
       for (int a = 0; a < b; ++a) {
         ans += cnt.getOrDefault(nums[a] + nums[b], 0);
+      }
+    }
+    return ans;
+  }
+
+  // nums[a]+nums[b]+nums[c]=nums[d]
+  public int countQuadruplets3(int[] nums) {
+    int n = nums.length;
+    int ans = 0;
+    Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
+    for (int c = n - 2; c >= 2; --c) {
+      cnt.put(nums[c + 1], cnt.getOrDefault(nums[c + 1], 0) + 1);
+      for (int a = 0; a < c; ++a) {
+        for (int b = a + 1; b < c; ++b) {
+          ans += cnt.getOrDefault(nums[a] + nums[b] + nums[c], 0);
+        }
       }
     }
     return ans;
