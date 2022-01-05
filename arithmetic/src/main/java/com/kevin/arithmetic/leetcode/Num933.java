@@ -1,5 +1,7 @@
 package com.kevin.arithmetic.leetcode;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -40,17 +42,17 @@ public class Num933 {
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
   class RecentCounter {
-    Queue<Integer> mQueue = new PriorityQueue();
+    List<Integer> mList = new LinkedList();
 
     public RecentCounter() {
     }
 
     public int ping(int t) {
-      mQueue.offer(t);
-      while (mQueue.peek() < t - 3000) {
-        mQueue.poll();
+      mList.add(t);
+      while (mList.get(0) < t - 3000) {
+        mList.remove(0);
       }
-      return mQueue.size();
+      return mList.size();
     }
   }
 }
