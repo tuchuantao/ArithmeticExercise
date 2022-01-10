@@ -65,3 +65,5 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 优先队列 </br>
 
 ### 21、[括号的最大嵌套深度](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num1614.java)
+
+### 22、[累加数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num306.java)
