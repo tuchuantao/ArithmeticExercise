@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/9/9
- * Desc:
+ * Desc: 实现 Trie (前缀树)
  */
 public class Num208 {
   /**

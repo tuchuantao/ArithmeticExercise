@@ -69,4 +69,9 @@ f(i,j) = f(i−1,j) + f(i,j−1) − f(i−1,j−1) + matrix[i][j]; <br/>
 ### 22、[累加数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num306.java)
 
 ### 23、[递增的三元子序列](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num334.java)
-双向遍历 or 贪心算法
+双向遍历 or 贪心算法</br>
+
+### 23、[数组中两个数的最大异或值](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num421.java)
+x = a ^ b 等价于 a = x ^ b </br>
+or 字典树 </br>
+
