@@ -79,7 +79,7 @@ public class Num820 {
     return ansLen;
   }
 
-  class Node {
+  private class Node {
     Map<Character, Node> childMap = new HashMap();
   }
 

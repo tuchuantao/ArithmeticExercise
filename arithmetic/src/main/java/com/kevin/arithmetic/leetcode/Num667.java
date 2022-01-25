@@ -95,7 +95,7 @@ public class Num667 {
     }
   }
 
-  class Node {
+  private class Node {
     Map<Character, Node> childMap = new HashMap();
     int val = 0;
   }
