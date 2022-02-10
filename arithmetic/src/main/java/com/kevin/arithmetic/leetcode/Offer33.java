@@ -60,7 +60,7 @@ public class Offer33 {
     return result;
   }
 
-  public boolean verifyPostorder1(int[] postorder) {
+  public boolean verifyPostorder1(int[] postorder) { // 分治法
     return recur(postorder, 0, postorder.length - 1);
   }
   boolean recur(int[] postorder, int i, int j) {
