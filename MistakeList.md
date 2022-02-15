@@ -80,3 +80,6 @@ or 字典树 </br>
 
 ### 26、[最简分数](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num1447.java)
 求两数最大公约数算法 GCD </br>
+
+### 26、[前 K 个高频元素](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num347.java)
+小顶堆 </br>
