@@ -2,7 +2,7 @@ package com.kevin.arithmetic.leetcode;
 
 /**
  * Created by tuchuantao on 2021/8/6
- * Desc:
+ * Desc: 找出星型图的中心节点
  */
 public class Num1791 {
   /**
