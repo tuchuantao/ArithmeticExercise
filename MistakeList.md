@@ -89,3 +89,6 @@ or 字典树 </br>
 
 ### 29、[我的日程安排表 II](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num731.java)
 边界计数 </br>
+
+### 30、[重建序列](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num444.java)
+ </br>
