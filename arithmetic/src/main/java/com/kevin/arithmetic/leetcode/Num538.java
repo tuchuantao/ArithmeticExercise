@@ -3,6 +3,8 @@ package com.kevin.arithmetic.leetcode;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import com.kevin.arithmetic.tree.TreeNode;
+
 /**
  * Created by tuchuantao on 2022/2/24
  * Desc: 把二叉搜索树转换为累加树
@@ -42,22 +44,6 @@ public class Num538 {
    * 链接：https://leetcode-cn.com/problems/convert-bst-to-greater-tree
    * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
    */
-  private static class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {}
-
-    TreeNode(int val) { this.val = val; }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-      this.val = val;
-      this.left = left;
-      this.right = right;
-    }
-  }
-
   public TreeNode convertBST1(TreeNode root) { // 中序遍历
     if (root == null) {
       return root;
