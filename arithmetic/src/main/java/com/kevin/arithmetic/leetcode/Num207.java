@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * Created by tuchuantao on 2021/8/6
- * Desc: 课程表
+ * Desc: 课程表 I
  */
 public class Num207 {
   /**
@@ -87,7 +87,7 @@ public class Num207 {
   List<List<Integer>> edges;
   int[] visited;
   boolean valid = true;
-  public boolean canFinish11(int numCourses, int[][] prerequisites) { // 深度遍历 & 三色状态
+  public boolean canFinish11(int numCourses, int[][] prerequisites) { // 深度遍历 & 三色状态  0:初始  1：将要学  2：已经学
     edges = new ArrayList<List<Integer>>();
     for (int i = 0; i < numCourses; ++i) {
       edges.add(new ArrayList<Integer>());

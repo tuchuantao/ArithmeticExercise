@@ -92,3 +92,6 @@ or 字典树 </br>
 
 ### 30、[重建序列](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num444.java)
  </br>
+ 
+### 31、[课程表 I](./arithmetic/src/main/java/com/kevin/arithmetic/leetcode/Num207.java)
+深度遍历，剪枝   OR  深度遍历，三色状态 </br>
